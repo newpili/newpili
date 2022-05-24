@@ -28,7 +28,7 @@ git push -u origin master
 
 ```
 
-5
+5上传
 
 ```shell
 以后上传和更新仓库，特别方便：
@@ -42,17 +42,9 @@ git remote set-url origin git@github.com:newpili/newpili.git
 
 git remote rm origin
 git remote add origin url
-
-
-
-
-
-
 ```
 
-
-
-
+6.补充
 
 ```shell
 一：切换远程仓库
