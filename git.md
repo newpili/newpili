@@ -1,34 +1,34 @@
-1 创建ssh key
+##### 1 创建ssh key
 
 ```shell
-ssh-keygen -t rsa -C "xxxxxx@163.com" //123 是你自己注册GitHub的邮箱
+ssh-keygen -t rsa -C "xxxxxx@163.com" //xxxxxx 是你自己注册GitHub的邮箱
 ```
 
-2 登录
+##### 2 登录
 
 ```shell
 ssh -T git@github.com
 ```
 
-3 设置全局
+##### 3 设置全局
+
+```shell
+git config --global user.name  "xxxxxx"			//你的GitHub登陆名
+git config --global user.email "xxxxxx@163.com"	//你的GitHub注册邮箱
+```
+
+##### 4 测试
 
 ```
-git config --global user.name  "xxxxxx"//你的GitHub登陆名
-git config --global user.email "xxxxxx@163.com"//你的GitHub注册邮箱
-```
-
-4 测试
-
-```
-git init
-git add first.txt
-git commit -m "test"
+git init										//初始化你的仓库
+git add xxxx.txt								//在你仓库里加文件
+git commit -m "test"							//
 git remote add origin git@github.com:newpili/newpili.git 
 git push -u origin master
 
 ```
 
-5上传
+##### 5上传
 
 ```shell
 以后上传和更新仓库，特别方便：
@@ -44,7 +44,7 @@ git remote rm origin
 git remote add origin url
 ```
 
-6.补充
+##### 6.补充知识
 
 ```shell
 一：切换远程仓库
@@ -75,7 +75,6 @@ git remote add origin git@github.com:newpili/newpili.git #仓库地址(ssh或htt
 缺點：代碼被還原，但是多人使用時本地代碼版本號高於當前版本號，需要先刪除本地分支，再重新拉取
 更改前：版本1 ---版本2 --- 版本3
 更改後：版本1（後續版本被刪除）
-
 
 2：revert（生成新版本）
 （1）：要恢復的版本號
